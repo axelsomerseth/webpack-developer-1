@@ -54,10 +54,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
   },
-  optimization: {
-    splitChunks: { chunks: "all" },
-  },
-  cache: false,
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
