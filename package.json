@@ -1,0 +1,33 @@
+{
+  "name": "webpack-developer-1",
+  "version": "1.0.0",
+  "description": "A developer who is able to effectively integrate and use Webpack in a web project.",
+  "main": "./source/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelsomerseth/webpack-developer-1.git"
+  },
+  "keywords": [
+    "webpack",
+    "babel",
+    "sass"
+  ],
+  "author": "Axel Somerseth Cordova <axelsomerseth@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axelsomerseth/webpack-developer-1/issues"
+  },
+  "homepage": "https://github.com/axelsomerseth/webpack-developer-1#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
