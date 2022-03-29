@@ -4,6 +4,9 @@
   "description": "A developer who is able to effectively integrate and use Webpack in a web project.",
   "main": "./source/index.js",
   "scripts": {
+    "start": "webpack serve --mode development",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,12 +25,27 @@
   },
   "homepage": "https://github.com/axelsomerseth/webpack-developer-1#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "marked": "^4.0.12",
+    "prismjs": "^1.27.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+$codeBackground: #e0e0e0;
+$fontFamily: "Roboto Mono";
+$shadowColor: #0e100a;
+
+body {
+  margin: 0px;
+  background-color: #eeeeee;
+}
+
+#app {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin window-style {
+  background-color: #ffffff;
+  padding: 0;
+  border: 2px solid black;
+  margin: 1rem;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  box-shadow: 2px 2px 10px 2px $shadowColor;
+}
+
+#editor-wrapper {
+  @include window-style;
+}
+
+#preview-wrapper {
+  @include window-style;
+}
+
+.toolbar {
+  z-index: 5;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-family: $fontFamily;
+  font-weight: 700;
+}
+
+#editor {
+  width: 600px;
+  border: 1px solid black;
+  margin-bottom: -5px;
+  font-family: $fontFamily;
+  font-weight: 400;
+}
+
+#preview {
+  width: 850px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 0 1rem;
+}
+
+.collapsed {
+  min-height: 250px;
+}
+
+.expanded {
+  min-height: 92vh;
+}
+
+.btn-expand {
+  border: none;
+  background-color: #ffffff;
+}
+
+#preview h1 {
+  border-bottom: 3px solid gray;
+}
+
+#preview h2 {
+  border-bottom: 2px solid gray;
+}
+
+#preview h3 {
+  border-bottom: 1px solid gray;
+}
+
+#preview p {
+  display: block;
+}
+
+#preview pre {
+  overflow: auto;
+  background-color: $codeBackground;
+}
+
+#preview code {
+  background-color: $codeBackground;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#preview pre code span {
+  background-color: $codeBackground;
+}
+
+#preview blockquote {
+  display: block;
+  border-left: 5px solid #bdbdbd;
+  padding-left: 5px;
+  font-weight: 600;
+}
+
+#preview table,
+td,
+th {
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#preview img {
+  display: block;
+  max-width: 85%;
+  margin: 1rem auto;
+}
+
+@media screen and (max-width: 850px) {
+  #editor-wrapper {
+    max-width: 500px;
+  }
+  #editor {
+    max-width: 480px;
+  }
+  #preview-wrapper {
+    max-width: 650px;
+  }
+  #preview {
+    max-width: 650px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #editor-wrapper {
+    max-width: 75vw;
+  }
+  #editor {
+    max-width: 70vw;
+  }
+  #preview-wrapper {
+    max-width: 90vw;
+  }
+  #preview {
+    max-width: 87vw;
+  }
+  #preview code {
+    font-size: 12px;
+  }
+}
