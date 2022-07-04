@@ -1,8 +1,8 @@
 import React from "react";
-import MarkdownPlaceholder from "./Middleware/Placeholder.js";
-import Editor from "./Components/Editor.js";
-import Preview from "./Components/Preview.js";
-import "./Assets/Styles/App.scss";
+import MarkdownPlaceholder from "./data/Placeholder.js";
+import Editor from "./components/Editor.js";
+import Preview from "./components/Preview.js";
+import "./assets/styles/App.scss";
 
 class App extends React.Component {
   constructor(props) {

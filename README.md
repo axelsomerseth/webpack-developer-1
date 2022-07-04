@@ -26,9 +26,9 @@ $ npm install --save-dev mini-css-extract-plugin
 
 # 2. Use Webpack to bundle ES6 modules.
 
-First we need to configure Webpack, create a new file named `webpack.config.js` 
+First we need to configure Webpack, create a new file named `webpack.config.js`
 
-```jsx
+```js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
@@ -39,7 +39,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
-      }
+      },
     ],
   },
   plugins: [
@@ -56,7 +56,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, "public"),
     },
     compress: true,
     port: 3000,
@@ -64,7 +64,7 @@ module.exports = {
 };
 ```
 
-Second, create a babel configuration file named `babel.config.json` 
+Second, create a babel configuration file named `babel.config.json`
 
 ```json
 {
@@ -76,7 +76,7 @@ Third, we need to use npm scripts commands in `package.json`:
 
 ```json
 {
-	// omitted configuration
+  // omitted configuration
 
   "scripts": {
     "start": "webpack serve --mode development --open",
@@ -84,7 +84,7 @@ Third, we need to use npm scripts commands in `package.json`:
     "build": "webpack --mode production"
   }
 
-	// omitted configuration
+  // omitted configuration
 }
 ```
 
@@ -92,17 +92,17 @@ Third, we need to use npm scripts commands in `package.json`:
 
 We need to add the following configuration to webpack config file
 
-```jsx
+```js
 // omitted configuration
 
 module.exports = {
-	// omitted configuration
+  // omitted configuration
 
   optimization: {
     splitChunks: { chunks: "all" },
   },
-	
-	// omitted configuration
+
+  // omitted configuration
 };
 ```
 
@@ -126,7 +126,7 @@ $ npm install --save-dev babel-loader
 
 ### c. Add Babel loader to Webpack config (for React JSx files). Final configuration.
 
-```jsx
+```js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
@@ -168,7 +168,7 @@ module.exports = {
   cache: false,
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, "public"),
     },
     compress: true,
     port: 3000,
