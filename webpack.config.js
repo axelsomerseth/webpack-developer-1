@@ -10,7 +10,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.m?js$/,
+        test: /\.m?jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -34,6 +34,8 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
   },
   optimization: {
+    chunkIds: "natural",
+    minimize: true,
     splitChunks: {
       chunks: "all",
     },

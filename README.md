@@ -80,7 +80,6 @@ Third, we need to use npm scripts commands in `package.json`:
 
   "scripts": {
     "start": "webpack serve --mode development --open",
-    "dev": "webpack --mode development",
     "build": "webpack --mode production"
   }
 
@@ -139,7 +138,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.m?js$/,
+        test: /\.m?jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -163,12 +162,13 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
   },
   optimization: {
-    splitChunks: { chunks: "all" },
+    splitChunks: {
+      chunks: "all",
+    },
   },
-  cache: false,
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.resolve(__dirname, "public"),
     },
     compress: true,
     port: 3000,
